@@ -1,11 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Platform } from 'react-native';
+
+const number = Platform.select({
+  ios: '1',
+  android: '2',
+});
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Text>共通のコンテンツ</Text>
+      {Platform.OS === 'ios' && <Text>iOS用のコンテンツ</Text>}
+      {Platform.OS === 'android' && <Text>Android用のコンテンツ</Text>}
+      {Platform.isPad && <Text>iPad用のコンテンツ</Text>}
     </View>
   );
 }
