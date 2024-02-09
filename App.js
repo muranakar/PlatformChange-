@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Platform } from 'react-native';
 const number = Platform.select({
   ios: '1',
   android: '2',
+  default: '3',
 });
 
 export default function App() {
