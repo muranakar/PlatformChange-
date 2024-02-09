@@ -8,7 +8,7 @@ const number = Platform.select({
 
 export default function App() {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>共通のコンテンツ</Text>
       {Platform.OS === 'ios' && <Text>iOS用のコンテンツ</Text>}
       {Platform.OS === 'android' && <Text>Android用のコンテンツ</Text>}
