@@ -13,6 +13,7 @@ export default function App() {
       {Platform.OS === 'ios' && <Text>iOS用のコンテンツ</Text>}
       {Platform.OS === 'android' && <Text>Android用のコンテンツ</Text>}
       {Platform.isPad && <Text>iPad用のコンテンツ</Text>}
+      <Text>{number}</Text>
     </View>
   );
 }
